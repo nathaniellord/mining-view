@@ -5,4 +5,16 @@ export class MiningService {
 
   constructor() { }
 
+  getMiners() {
+
+  }
+
+  startMining(pool) {
+
+  }
+
+  stopMining() {
+
+  }
+
 }

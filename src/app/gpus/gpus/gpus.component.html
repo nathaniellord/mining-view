@@ -1,9 +1,9 @@
-<div fxLayout="row" fxLayoutWrap fxLayoutGap="2rem">
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="2rem" class="container">
   <mat-card *ngFor="let gpu of gpus">
     <mat-card-title>{{gpu.Name}}</mat-card-title>
     <mat-card-content>
-      <div>Compatibility: {{gpu.AdapterCompatibility}}</div>
-      <div>ID: {{gpu.DeviceID}}</div>
+      <div>Platform: {{gpu.AdapterCompatibility}}</div>
+      <div>ID: {{gpu.device}}</div>
       <div>Status: {{gpu.Status}}</div>
     </mat-card-content>
   </mat-card>

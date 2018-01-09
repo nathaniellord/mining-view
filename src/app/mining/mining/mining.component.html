@@ -1,3 +1,35 @@
-<p>
-  mining works!
-</p>
+<div fxLayout="row" fxLayoutWrap fxLayoutGap="2rem" class="container">
+  <mat-card>
+    <mat-card-title>
+      Status: Running
+    </mat-card-title>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      Hash Rate: 5 KH/s
+    </mat-card-title>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      Miners Running: 3
+    </mat-card-title>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>
+      Errors: 12
+    </mat-card-title>
+  </mat-card>
+</div>
+<div class="container" style="margin-top:10px;">
+  <h2>Miners
+    <button mat-raised-button color="accent" (click)="addMiner()">Start Miner</button>
+  </h2>
+  <!-- <mat-card>
+    <mat-card-title>
+      Mining Job
+    </mat-card-title>
+    <mat-card-content>
+
+    </mat-card-content>
+  </mat-card> -->
+</div>

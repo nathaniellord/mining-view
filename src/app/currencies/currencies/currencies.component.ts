@@ -12,7 +12,6 @@ import { TitleService } from '../../shared/title.service';
 })
 export class CurrenciesComponent implements OnInit {
 
-  currencies = [];
   displayedColumns = ['symbol', 'name', 'algorithm', 'priceUsd', 'priceBtc', 'marketCap', 'change'];
   dataSource: CurrenciesDataSource;
 
@@ -22,7 +21,6 @@ export class CurrenciesComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.currenciesService.getCurrenciesWithStats().subscribe(currencies => this.currencies = currencies)
   }
 
 }
