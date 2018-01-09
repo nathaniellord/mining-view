@@ -2,21 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 import {
-  MatCheckboxModule,
-  MatListModule,
+  MatButtonModule,
   MatCardModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatIconModule,
   MatInputModule,
+  MatListModule,
   MatProgressSpinnerModule,
   MatSelectModule,
-  MatButtonModule,
-  MatIconModule,
-  MatDialogModule,
+  MatSidenavModule,
   MatSlideToggleModule,
   MatSnackBarModule,
-  MatSidenavModule,
+  MatTableModule,
   MatToolbarModule,
-  MatTableModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleService } from './title.service';
@@ -24,43 +25,45 @@ import { TitleService } from './title.service';
 @NgModule({
   imports: [
     CommonModule,
-    MatCheckboxModule,
-    MatListModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
     MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDialogModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
-    MatDialogModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     MatSnackBarModule,
-    MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   declarations: [],
   exports: [
-    MatCheckboxModule,
-    MatListModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
     MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDialogModule,
     MatIconModule,
     MatInputModule,
+    MatListModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
-    MatDialogModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     MatSnackBarModule,
-    MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [TitleService]
 })

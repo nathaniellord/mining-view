@@ -2,8 +2,13 @@
 <div mat-dialog-content>
   <p>Enter the required information to start a miner working</p>
   <mat-checkbox>All GPUs</mat-checkbox>
-  <mat-select placeholder="Select a Pool">
-    <mat-option *ngFor="let pool of pools" [value]="pool.url">
+  <mat-selection-list #gpuSelectionList>
+    <mat-list-option *ngFor="let gpu of gpus">
+      {{gpu.Name}}
+    </mat-list-option>
+  </mat-selection-list>
+  <mat-select placeholder="Select a Pool" [(ngModel)]="pool">
+    <mat-option *ngFor="let pool of pools" [value]="pool.poolid">
       {{ pool.url }}
     </mat-option>
   </mat-select>
