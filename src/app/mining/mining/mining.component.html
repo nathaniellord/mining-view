@@ -1,22 +1,17 @@
 <div fxLayout="row" fxLayoutWrap fxLayoutGap="2rem" class="container">
   <mat-card>
     <mat-card-title>
-      Status: Running
+      Hash Rate: {{stats.hashrate}}
     </mat-card-title>
   </mat-card>
   <mat-card>
     <mat-card-title>
-      Hash Rate: 5 KH/s
+      Miners Running: {{stats.miners}}
     </mat-card-title>
   </mat-card>
   <mat-card>
     <mat-card-title>
-      Miners Running: 3
-    </mat-card-title>
-  </mat-card>
-  <mat-card>
-    <mat-card-title>
-      Errors: 12
+      Active GPUs: {{stats.activeGPUs}}
     </mat-card-title>
   </mat-card>
 </div>
@@ -24,12 +19,14 @@
   <h2>Miners
     <button mat-raised-button color="accent" (click)="addMiner()">Start Miner</button>
   </h2>
-  <!-- <mat-card>
-    <mat-card-title>
-      Mining Job
-    </mat-card-title>
-    <mat-card-content>
-
-    </mat-card-content>
-  </mat-card> -->
+  <mat-list>
+    <mat-list-item *ngFor="let miner of miners">
+      <h3 mat-line>{{miner.pool}}</h3>
+      <p mat-line>Hashrate: {{miner.hashrate}}</p>
+      <p mat-line>Hashes: {{miner.accepted}}</p>
+      <p mat-line>Last Hash: {{miner.lastaccepted | date:'medium'}}</p>
+      <p mat-line>GPUs: {{miner.gpus.length}}</p>
+      <p mat-line>Threads: {{miner.threads}}</p>
+    </mat-list-item>
+  </mat-list>
 </div>
